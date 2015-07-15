@@ -1,0 +1,16 @@
+{
+    "name": "lambdacasserole/pontoon",
+    "description": "Mini deployment automation program.",
+    "minimum-stability": "stable",
+    "license": "CC-BY-SA-4.0",
+    "authors": [
+        {
+            "name": "Saul Johnson",
+            "email": "saul.a.johnson@gmail.com"
+        }
+    ],
+    "require": {
+        "mustangostang/spyc": "^0.5.1",
+        "twig/twig": "^1.18"
+    }
+}

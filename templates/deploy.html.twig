@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Deployments{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="js/ehpc.modals.js"></script>
+    <script type="text/javascript" src="js/deploy.js"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Deploy Targets</h1>
+            <p>
+                The following websites on your server are configured for Pontoon.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-msg">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Project Name</th>
+                        <th>Description</th>
+                        <th>Path</th>
+                        <th>Deploy Script</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                {% for target in targets %}
+                    <tr>
+                        <td>{{ target.projectName}}</td>
+                        <td>{{ target.description }}</td>
+                        <td>{{ target.directoryPath|replace('\\', '/') }}</td>
+                        <td>{{ target.deployScript }}</td>
+                        <td>
+                            <button onclick="deploy('{{ target.identifier }}');" class="btn btn-primary">Deploy</button>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{
+  "name": "pontoon",
+  "version": "1.0.0",
+  "description": "Mini deployment automation program.",
+  "main": "index.php",
+  "dependencies": {
+    "bower": "^1.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "deployment",
+    "easy",
+    "click"
+  ],
+  "author": "Saul Johnson",
+  "license": "CC-BY-SA-4.0"
+}

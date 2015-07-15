@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Deploy it! Now!</h1>
+            <p>
+                Pontoon is a simple and straightforward tool for running deploy scripts from a web service.
+                When it comes to getting my latest changes online, I yearn for something simple. One button
+                click should be all it takes or I start laughing like a maniac and talking to my cup of coffee.
+            </p>
+            <blockquote>
+                "For f**k's sake! Just f**king deploy you piece of s**t!"
+                <footer>Me when my 3rd party deployment service fails</footer>
+            </blockquote>
+            <h2>Aaahhhhh! F**k!</h2>
+            <p>
+                If that's how you sound at the moment when a client asks you to make a minor, 5-second content
+                change that's gonna end up taking you half an hour by the time you've found your SSH keys,
+                loaded them into your client, connected and run all your deployment stuff then do youself a
+                favour and grab Pontoon.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <img src="images/step-1-install.svg">
+            <h3>Bish</h3>
+            <p>
+                Install it by shoving it on your server as a website. Done. Next.
+            </p>
+        </div>
+        <div class="col-md-4 text-center">
+            <img src="images/step-2-config.svg">
+            <h3>Bash</h3>
+            <p>
+                Configure a simple YAML file for your project, call it pontoon.yml and bundle it with your
+                project. Done.
+            </p>
+        </div>
+        <div class="col-md-4 text-center">
+            <img src="images/step-3-click.svg">
+            <h3>Bosh</h3>
+            <p>
+                Log in to your setup and click deploy. Your changes are live. Boom.
+            </p>
+        </div>
+    </div>
+{% endblock %}

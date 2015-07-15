@@ -1,0 +1,69 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="bower_components/bootswatch/simplex/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        {% block javascripts %}{% endblock %}
+        <title>Pontoon - Simple Deployment | {% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <img src="images/logo.svg">
+                </div>
+            </div>
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="{{ navActive == 0 ? 'active' : '' }}">
+                                <a href="index.php">About</a>
+                            </li>
+                            {% if authenticated %}
+                                <li class="{{ navActive == 1 ? 'active' : '' }}">
+                                    <a href="deploy.php">Deployments</a>
+                                </li>
+                                <li>
+                                    <a href="logout.php">Logout</a>
+                                </li>
+                            {% else %}
+                                <li>
+                                    <a href="login.php">Login</a>
+                                </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            {% block content %}{% endblock %}
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center small">
+                    <span>Pontoon</span> by <a href="http://sauljohnson.com/">Saul Johnson</a> is licensed under a
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/">
+                        Creative Commons Attribution-ShareAlike 4.0 International License
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,5 @@
+root_path: "/var/www" # Path to your virtual hosts directory.
+deploy_config_name: "pontoon.yml" # The deploy configuration filename to look for. Leave it like this.
+admin_email: "me@example.com" # The e-mail address you're gonna use to log in.
+admin_password_hash: 5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8 # Login password hash (SHA-256). Change this!
+secret_key: DgBn8Trt # 8-character secret key.

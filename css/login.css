@@ -1,0 +1,26 @@
+hr
+{
+    opacity: 0.5;
+}
+
+.center-body
+{
+    width: 403px;
+    height: 569px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.logo
+{
+    margin-bottom: 36px;
+}
+
+.copyright
+{
+    padding-top: 16px;
+}
