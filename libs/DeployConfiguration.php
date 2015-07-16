@@ -42,6 +42,16 @@ class DeployConfiguration
         return $this->getDirectoryPath() . '/' . $this->getDeployScript();
     }
 
+    public function getScriptingExecutable()
+    {
+        return $this->config['scripting_exe'];
+    }
+
+    public function getDeployCommand()
+    {
+        return $this->getScriptingExecutable() . ' "' . $this->getFullDeployScriptPath() . '"';
+    }
+
     public function getDirectoryPath()
     {
         return dirname($this->path);

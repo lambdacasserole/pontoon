@@ -12,7 +12,7 @@ foreach ($targets as $target)
 {
     if ($target->getIdentifier() == $hash)
     {
-        $result = exec($target->getFullDeployScriptPath()); // Execute script.
+        $result = exec($target->getDeployCommand()); // Execute script.
         if ($result == null)
         {
             echo json_encode([
