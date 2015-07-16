@@ -21,7 +21,7 @@ class Configuration
         return $this->config['root_path'];
     }
 
-    public function getDeployonfigName()
+    public function getDeployConfigName()
     {
         return $this->config['deploy_config_name'];
     }
