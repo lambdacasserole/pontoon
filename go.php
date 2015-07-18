@@ -12,7 +12,7 @@ foreach ($targets as $target)
 {
     if ($target->getIdentifier() == $hash)
     {
-        $result = exec($target->getDeployCommand() . ' 2>&1'); // Execute script.
+        $result = shell_exec('/usr/bin/git pull 2>&1'); // Execute script.
         if ($result == null)
         {
             echo json_encode([
