@@ -4,5 +4,6 @@ function deploy(hash) {
         var result = JSON.parse(data);
         $('.col-msg').html('<div class="alert alert-' + result.status + '">' + result.message + '</div>');
         waitingDialog.hide();
+        alert(result.result);
     });
 }
