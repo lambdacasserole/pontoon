@@ -15,6 +15,7 @@ foreach ($targets as $target)
         $result = 'Trying to execute deploy as: ' . shell_exec('whoami');
         $result .= 'Executing: ' . $target->getDeployCommand() . "\r\n";
         $result .= exec($target->getDeployCommand() . ' 2>&1'); // Execute script.
+        $status = $result[strlen($result) - 1];
         if ($result == null)
         {
             echo json_encode([
@@ -23,7 +24,7 @@ foreach ($targets as $target)
                 'result' => $result,
             ]); // Null output from script.git l
         }
-        else if ($result == '0')
+        else if ($status == '0')
         {
             echo json_encode([
                 'status' => 'success',
@@ -31,7 +32,7 @@ foreach ($targets as $target)
                 'result' => $result,
             ]); // If script returns 0, that means success.
         }
-        else if ($result == '1') {
+        else if ($status == '1') {
             echo json_encode([
                 'status' => 'danger',
                 'message' => 'There was a problem deploying your site. Your script returned a failure.',
