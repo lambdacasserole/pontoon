@@ -12,15 +12,15 @@ foreach ($targets as $target)
 {
     if ($target->getIdentifier() == $hash)
     {
-        //$result = shell_exec('/usr/bin/git pull 2>&1'); // Execute script.
-        $result = shell_exec('whoami');
+        $result = 'Trying to execute deploy as: ' . shell_exec('whoami');
+        $result .= shell_exec('/usr/bin/git pull 2>&1'); // Execute script.
         if ($result == null)
         {
             echo json_encode([
                 'status' => 'warning',
                 'message' => 'It doesn\'t look like your website deployed properly. Executing your script returned null.',
                 'result' => $result,
-            ]); // Null output from script.
+            ]); // Null output from script.git l
         }
         else if ($result == '0')
         {
