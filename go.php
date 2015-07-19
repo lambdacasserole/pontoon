@@ -12,7 +12,8 @@ foreach ($targets as $target)
 {
     if ($target->getIdentifier() == $hash)
     {
-        $result = shell_exec('/usr/bin/git pull 2>&1'); // Execute script.
+        //$result = shell_exec('/usr/bin/git pull 2>&1'); // Execute script.
+        $result = shell_exec('whoami');
         if ($result == null)
         {
             echo json_encode([
