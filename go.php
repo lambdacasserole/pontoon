@@ -13,7 +13,7 @@ foreach ($targets as $target)
     if ($target->getIdentifier() == $hash)
     {
         $result = 'Trying to execute deploy as: ' . shell_exec('whoami');
-        $result = 'Executing: ' . $target->getDeployCommand();
+        $result .= 'Executing: ' . $target->getDeployCommand() . "\r\n";
         $result .= exec($target->getDeployCommand() . ' 2>&1'); // Execute script.
         if ($result == null)
         {
