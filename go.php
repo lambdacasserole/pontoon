@@ -13,7 +13,7 @@ foreach ($targets as $target)
     if ($target->getIdentifier() == $hash)
     {
         $result = 'Trying to execute deploy as: ' . shell_exec('whoami');
-        $result .= shell_exec('/usr/bin/git pull 2>&1'); // Execute script.
+        $result .= exec($target->getDeployCommand() . ' 2>&1'); // Execute script.
         if ($result == null)
         {
             echo json_encode([
