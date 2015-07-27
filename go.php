@@ -14,7 +14,7 @@ foreach ($targets as $target)
     {
         $result = 'Trying to execute deploy as: ' . shell_exec('whoami');
         $result .= 'Executing: ' . $target->getDeployCommand() . "\r\n";
-        $result .= exec($target->getDeployCommand() . ' 2>&1'); // Execute script.
+        $result .= shell_exec($target->getDeployCommand() . ' 2>&1'); // Execute script.
         $status = $result[strlen($result) - 1];
         if ($result == null)
         {
