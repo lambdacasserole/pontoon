@@ -4,3 +4,7 @@
 /composer.phar
 /config.yml
 /.idea
+public_html
+deploy.sh
+
+
