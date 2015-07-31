@@ -15,14 +15,14 @@ foreach ($targets as $target)
         $result = 'Trying to execute deploy as: ' . shell_exec('whoami');
         $result .= 'Executing: ' . $target->getDeployCommand() . "\r\n";
         $result .= shell_exec($target->getDeployCommand() . ' 2>&1'); // Execute script.
-        $status = $result[strlen($result) - 1];
+        $status = $result[strlen(trim($result)) - 1];
         if ($result == null)
         {
             echo json_encode([
                 'status' => 'warning',
                 'message' => 'It doesn\'t look like your website deployed properly. Executing your script returned null.',
                 'result' => $result,
-            ]); // Null output from script.git l
+            ]); // Null output from script.
         }
         else if ($status == '0')
         {
