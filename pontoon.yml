@@ -1,0 +1,6 @@
+project_name: Pontoon
+description: Pontoon deploy system.
+deploy_enabled: true 
+deploy_script: deploy.sh
+scripting_exe: bash
+
