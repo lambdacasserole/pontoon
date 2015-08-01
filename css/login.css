@@ -21,6 +21,11 @@ hr
     margin: auto;
 }
 
+.margin-bottom-plus
+{
+    margin-bottom: 10px;
+}
+
 .logo
 {
     margin-bottom: 36px;
