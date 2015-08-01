@@ -31,12 +31,15 @@ function getDeployTargets()
     // Filter for valid deploy targets.
     $targets = [];
     $contents = scandir($dir);
-    foreach ($contents as $file) {
+    foreach ($contents as $file)
+    {
         $path = $dir . '/' . $file;
         $deployConfig = $path . '/' . $script;
-        if ($file[0] != '.' && is_dir($path) && file_exists($deployConfig)) {
+        if ($file[0] != '.' && is_dir($path) && file_exists($deployConfig))
+        {
             $loadedConfig = new DeployConfiguration($deployConfig);
-            if ($loadedConfig->isDeployEnabled()) {
+            if ($loadedConfig->isDeployEnabled())
+            {
                 $targets[] = $loadedConfig;
             }
         }
@@ -77,8 +80,10 @@ function redirectToLoginPage()
 /**
  * Redirects the client to the login page if they're not authenticated.
  */
-function protectPage() {
-    if (!Auth::isAuthenticated()) {
+function protectPage()
+{
+    if (!Auth::isAuthenticated())
+    {
         redirectToLoginPage();
     }
 }

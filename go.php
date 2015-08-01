@@ -32,7 +32,8 @@ foreach ($targets as $target)
                 'result' => $result,
             ]); // If script returns 0, that means success.
         }
-        else if ($status == '1') {
+        else if ($status == '1')
+        {
             echo json_encode([
                 'status' => 'danger',
                 'message' => 'There was a problem deploying your site. Your script returned a failure.',

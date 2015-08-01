@@ -4,7 +4,7 @@
  * # Login page
  *
  * The Pontoon login page. Simple one-login kinda thingy, reading the hash straight from the config. I'm not about to
- * go implementing a whole user account thing here with profiles a changeable passwords and all that jazz. One email,
+ * go implementing a whole user account thing here with profiles and changeable passwords and all that jazz. One email,
  * one hashed password.
  *
  * Stay fresh and spooky,
@@ -14,21 +14,23 @@
 
 require 'core.php';
 
-$status = 0;
-
+// If we're already logged in, go to deploy.
 if (Auth::isAuthenticated())
 {
     redirectToDeployPage();
 }
 
-if (Request::isLoginFormSubmitted()) {
+// If the login form is submitted.
+$status = 0;
+if (Request::isLoginFormSubmitted())
+{
     if (Auth::authenticate(Request::getLoginEmail(), Request::getLoginPassword()))
     {
-        redirectToDeployPage();
+        redirectToDeployPage(); // Authentication success.
     }
     else
     {
-        $status = 1;
+        $status = 1; // Bad credentials.
     }
 }
 
