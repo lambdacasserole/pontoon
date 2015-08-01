@@ -1,10 +1,11 @@
 # Pontoon
 
+Pontoon is a simple and straightforward tool for running deploy scripts from a web service.
+
 ![Brainfony](https://raw.githubusercontent.com/lambdacasserole/pontoon/master/logo.png)
 
-Pontoon is a simple and straightforward tool for running deploy scripts from a web service. When it comes to getting my
-latest changes online, I yearn for something simple. One button click should be all it takes or I start laughing like a
-maniac and talking to my cup of coffee.
+When it comes to getting my latest changes online, I yearn for something simple. One button click should be all it takes or I
+start laughing like a maniac and talking to my cup of coffee.
 
 ## Aaahhhhh! F**k!
 
