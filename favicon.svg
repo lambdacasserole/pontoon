@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="93.593803"
+   height="113"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="pntn.svg"
+   inkscape:export-filename="C:\Users\Saul\Desktop\test.png"
+   inkscape:export-xdpi="100"
+   inkscape:export-ydpi="100">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="4.0000001"
+     inkscape:cx="-29.734822"
+     inkscape:cy="59.940165"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-322.38304,-86.350451)">
+    <g
+       transform="translate(8.414343,26.162951)"
+       id="g3005"
+       style="fill:#d45500"
+       inkscape:export-xdpi="288"
+       inkscape:export-ydpi="288">
+      <path
+         style="font-size:144px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:-15.34999561px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:abeatbyKai;-inkscape-font-specification:abeatbyKai"
+         d="m 351.3125,116.1875 0.0937,0.125 -37.4375,56.875 12.9375,0 31.53125,-47.8125 32.125,47.8125 12.96875,0 -38.75,-57 -13.46875,0 z"
+         id="path3009"
+         inkscape:connector-curvature="0" />
+      <path
+         style="font-size:144px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:-15.34999561px;word-spacing:0px;fill:#d45500;fill-opacity:1;stroke:none;font-family:abeatbyKai;-inkscape-font-specification:abeatbyKai"
+         d="m 396.46875,116.1875 0,57 11.09375,0 0,-57 -11.09375,0 z"
+         id="path3011"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3015"
+         d="m 351.3125,117.1875 0.0937,-0.125 -37.4375,-56.875 12.9375,0 31.53125,47.8125 32.125,-47.8125 12.96875,0 -38.75,57 -13.46875,0 z"
+         style="font-size:144px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:-15.34999561px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:abeatbyKai;-inkscape-font-specification:abeatbyKai" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3017"
+         d="m 396.46875,117.1875 0,-57 11.09375,0 0,57 -11.09375,0 z"
+         style="font-size:144px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:-15.34999561px;word-spacing:0px;fill:#d45500;fill-opacity:1;stroke:none;font-family:abeatbyKai;-inkscape-font-specification:abeatbyKai" />
+    </g>
+  </g>
+</svg>
