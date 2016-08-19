@@ -6,5 +6,5 @@ require 'core.php';
 Auth::logout();
 
 // Redirect to home page.
-header('Location: index.php');
+header('Location: /');
 die();
