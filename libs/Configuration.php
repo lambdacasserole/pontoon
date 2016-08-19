@@ -80,7 +80,7 @@ class Configuration
     {
         if (self::$instance == null)
         {
-            self::$instance = new Configuration('config.yml'); // Load configuration.
+            self::$instance = new Configuration(__DIR__ . '/../config.yml'); // Load configuration.
         }
         return self::$instance;
     }

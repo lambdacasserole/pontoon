@@ -1,10 +1,10 @@
 <?php
 
-require 'vendor/autoload.php';
-require 'libs/Configuration.php';
-require 'libs/DeployConfiguration.php';
-require 'libs/Request.php';
-require 'libs/Auth.php';
+require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../libs/Configuration.php';
+require __DIR__ . '/../libs/DeployConfiguration.php';
+require __DIR__ . '/../libs/Request.php';
+require __DIR__ . '/../libs/Auth.php';
 
 /**
  * Gets the configuration class for the application.
