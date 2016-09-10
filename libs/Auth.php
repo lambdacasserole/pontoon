@@ -43,7 +43,7 @@ class Auth
      * @param string $password  the password to use to decrypt it
      * @return string
      */
-    public static function decrypt($data,$password)
+    public static function decrypt($data, $password)
     {
         $iv_size = mcrypt_get_iv_size(MCRYPT_CAST_256, MCRYPT_MODE_CBC);
         $iv = substr($data, 0, $iv_size);
