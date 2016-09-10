@@ -74,7 +74,7 @@ class Auth
     {
         // Encrypt password on its way in to cookie.
         $config = getConfiguration();
-        setCookie(self::COOKIE_KEY_AUTH, self::encrypt($auth,
+        setcookie(self::COOKIE_KEY_AUTH, self::encrypt($auth,
             $config->getSecretKey()));
     }
 
