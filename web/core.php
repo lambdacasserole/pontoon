@@ -55,7 +55,7 @@ function getDeployTargets()
  */
 function getTwig()
 {
-    $loader = new Twig_Loader_Filesystem('templates');
+    $loader = new Twig_Loader_Filesystem(__DIR__ . '/../templates');
     return new Twig_Environment($loader, []);
 }
 
