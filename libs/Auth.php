@@ -14,11 +14,12 @@ class Auth
      * Hashes a password.
      *
      * @param string $password  the password to hash
+     * @param string $salt      the salt for the password
      * @return string
      */
-    public static function hashPassword($password)
+    public static function hashPassword($password, $salt)
     {
-        return hash('sha256', $password);
+        return hash('sha256', $password . $salt);
     }
 
     /**
@@ -90,7 +91,7 @@ class Auth
         // Check credentials.
         $config = getConfiguration();
         if ($config->getAdminEmail() != $email
-            || self::hashPassword($password) != $config->getAdminPasswordHash())
+            || self::hashPassword($password, $config->getSalt()) != $config->getAdminPasswordHash())
         {
             return false; // Authentication failure.
         }
@@ -110,7 +111,7 @@ class Auth
     {
         // Is encrypted password stored in cookie?
         $config = getConfiguration();
-        return self::hashPassword(self::getAuth()) == $config->getAdminPasswordHash();
+        return self::hashPassword(self::getAuth(), $config->getSalt()) == $config->getAdminPasswordHash();
     }
 
     /**
