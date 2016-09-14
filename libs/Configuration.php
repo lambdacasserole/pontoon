@@ -72,6 +72,16 @@ class Configuration
     }
 
     /**
+     * Gets the salt to use during password hashing.
+     *
+     * @return string
+     */
+    public function getSalt()
+    {
+        return $this->config['salt'];
+    }
+
+    /**
      * Gets the single instance of this class.
      *
      * @return Configuration
