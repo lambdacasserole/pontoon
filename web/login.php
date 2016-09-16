@@ -2,6 +2,8 @@
 
 require 'core.php';
 
+use Minim\Request;
+
 // If we're already logged in, go to deploy.
 if (getAuthenticator()->isAuthenticated())
 {
@@ -10,9 +12,9 @@ if (getAuthenticator()->isAuthenticated())
 
 // If the login form is submitted.
 $status = 0;
-if (\Minim\Request::isLoginFormSubmitted())
+if (Request::isLoginFormSubmitted())
 {
-    if (getAuthenticator()->authenticate(\Minim\Request::getLoginEmail(), \Minim\Request::getLoginPassword()))
+    if (getAuthenticator()->authenticate(Request::getLoginEmail(), Request::getLoginPassword()))
     {
         redirectToDeployPage(); // Authentication success.
     }

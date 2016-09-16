@@ -25,7 +25,7 @@ function getAuthenticator()
  */
 function getGlobalConfiguration()
 {
-    return new GlobalConfiguration('/../config.yml');
+    return new GlobalConfiguration(__DIR__ . '/../config.yml');
 }
 
 /**
