@@ -1,5 +1,9 @@
 <?php
 
+namespace Pontoon;
+
+use Spyc;
+
 /**
  * Represents a configuration file for a specific deploy target.
  *

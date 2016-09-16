@@ -1,23 +1,31 @@
 <?php
 
-require __DIR__ . '/../vendor/autoload.php';
-require __DIR__ . '/../libs/Configuration.php';
-require __DIR__ . '/../libs/DeployConfiguration.php';
+use Minim\Authenticator;
+use Minim\Configuration;
+use Pontoon\DeployConfiguration;
+use Pontoon\GlobalConfiguration;
 
+require __DIR__ . '/../vendor/autoload.php';
+
+/**
+ * Gets the authenticator for the application.
+ *
+ * @return Authenticator
+ */
 function getAuthenticator()
 {
-    $config = new \Minim\Configuration(__DIR__ . '/../security.yml');
-    return new \Minim\Authenticator($config);
+    $config = new Configuration(__DIR__ . '/../security.yml');
+    return new Authenticator($config);
 }
 
 /**
- * Gets the configuration class for the application.
+ * Gets the global configuration settings for the application.
  *
- * @return Configuration
+ * @return GlobalConfiguration
  */
-function getConfiguration()
+function getGlobalConfiguration()
 {
-    return Configuration::get();
+    return new GlobalConfiguration('/../config.yml');
 }
 
 /**
@@ -28,7 +36,7 @@ function getConfiguration()
 function getDeployTargets()
 {
     // Get configuration.
-    $config = getConfiguration();
+    $config = getGlobalConfiguration();
     $dir = $config->getRootPath();
     $script = $config->getDeployConfigName();
 
@@ -53,7 +61,7 @@ function getDeployTargets()
 }
 
 /**
- * Gets a handle on the twig templating engine for the application.
+ * Gets a handle on the Twig template engine for the application.
  *
  * @return Twig_Environment
  */
@@ -64,12 +72,22 @@ function getTwig()
 }
 
 /**
+ * Redirects to the specified URL and terminates execution.
+ *
+ * @param string $url   the URL to redirect to
+ */
+function redirect($url)
+{
+    header("Location: $url");
+    die();
+}
+
+/**
  * Redirects the client to the deployments page.
  */
 function redirectToDeployPage()
 {
-    header("Location: deploy.php");
-    die();
+    redirect('deploy.php');
 }
 
 /**
@@ -77,16 +95,15 @@ function redirectToDeployPage()
  */
 function redirectToLoginPage()
 {
-    header("Location: login.php");
-    die();
+    redirect('login.php');
 }
 
 /**
  * Redirects the client to the login page if they're not authenticated.
  */
-function protectPage() use ($auth)
+function protectPage()
 {
-    if (getAuthenticator()->isAuthenticated())
+    if (!getAuthenticator()->isAuthenticated())
     {
         redirectToLoginPage();
     }

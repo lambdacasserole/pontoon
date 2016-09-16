@@ -1,0 +1,2 @@
+root_path: /var/www
+deploy_config_name: pontoon.yml

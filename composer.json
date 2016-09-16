@@ -13,5 +13,10 @@
         "mustangostang/spyc": "^0.5.1",
         "twig/twig": "^1.18",
         "lambdacasserole/minim": "^1.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Pontoon": "src"
+        }
     }
 }

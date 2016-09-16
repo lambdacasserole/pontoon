@@ -61,6 +61,7 @@ phpunit.phar
 
 # Sensitive
 /config.yml
+/security.yml
 
 # Compiled code
 /web/js/
