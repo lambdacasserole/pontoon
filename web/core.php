@@ -3,8 +3,12 @@
 require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/../libs/Configuration.php';
 require __DIR__ . '/../libs/DeployConfiguration.php';
-require __DIR__ . '/../libs/Request.php';
-require __DIR__ . '/../libs/Auth.php';
+
+function getAuthenticator()
+{
+    $config = new \Minim\Configuration(__DIR__ . '/../security.yml');
+    return new \Minim\Authenticator($config);
+}
 
 /**
  * Gets the configuration class for the application.
@@ -80,9 +84,9 @@ function redirectToLoginPage()
 /**
  * Redirects the client to the login page if they're not authenticated.
  */
-function protectPage()
+function protectPage() use ($auth)
 {
-    if (!Auth::isAuthenticated())
+    if (getAuthenticator()->isAuthenticated())
     {
         redirectToLoginPage();
     }

@@ -3,7 +3,7 @@
 require 'core.php';
 
 // Remove login cookie.
-Auth::logout();
+getAuthenticator()->logout();
 
 // Redirect to home page.
 header('Location: /');

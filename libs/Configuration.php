@@ -8,7 +8,18 @@
  */
 class Configuration
 {
+    /**
+     * Holds the single instance of this class.
+     *
+     * @var Configuration
+     */
     private static $instance;
+
+    /**
+     * Holds the raw associative array that underlies this class.
+     *
+     * @var array
+     */
     private $config;
 
     /**
@@ -39,46 +50,6 @@ class Configuration
     public function getDeployConfigName()
     {
         return $this->config['deploy_config_name'];
-    }
-
-    /**
-     * Gets the admin email address required for login to the deployments page.
-     *
-     * @return string
-     */
-    public function getAdminEmail()
-    {
-        return $this->config['admin_email'];
-    }
-
-    /**
-     * Gets the password hash required for login to the deployments page.
-     *
-     * @return string
-     */
-    public function getAdminPasswordHash()
-    {
-        return $this->config['admin_password_hash'];
-    }
-
-    /**
-     * Gets the secret key used by the application for symmetric encryption purposes.
-     *
-     * @return string
-     */
-    public function getSecretKey()
-    {
-        return $this->config['secret_key'];
-    }
-
-    /**
-     * Gets the salt to use during password hashing.
-     *
-     * @return string
-     */
-    public function getSalt()
-    {
-        return $this->config['salt'];
     }
 
     /**
