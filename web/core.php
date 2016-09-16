@@ -1,11 +1,11 @@
 <?php
 
+require __DIR__ . '/../vendor/autoload.php';
+
 use Minim\Authenticator;
 use Minim\Configuration;
 use Pontoon\DeployConfiguration;
 use Pontoon\GlobalConfiguration;
-
-require __DIR__ . '/../vendor/autoload.php';
 
 /**
  * Gets the authenticator for the application.
