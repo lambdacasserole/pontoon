@@ -12,7 +12,18 @@ use Spyc;
  */
 class DeployConfiguration
 {
+    /**
+     * The raw associative array that underlies this class
+     *
+     * @var array
+     */
     private $config;
+
+    /**
+     * The path to the deploy configuration file.
+     *
+     * @var string
+     */
     private $path;
 
     /**
@@ -97,7 +108,7 @@ class DeployConfiguration
     }
 
     /**
-     * Gets the directory path of the project
+     * Gets the directory path of the project.
      *
      * @return string
      */
