@@ -1,13 +1,6 @@
-#
-# Project: Pontoon
-# Author: Saul Johnson
-# Notes: Client-side script for the deployments page.
-#
-
-#
 # Uses an AJAX call to deploy a website.
 #
-# @param hash  the hash (unique ID) of the project to deploy
+# @param [String] hash the hash (unique ID) of the project to deploy
 #
 window.deploy = (hash) ->
   waitingDialog.show 'Deploying site', {}
