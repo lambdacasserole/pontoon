@@ -3,7 +3,7 @@
 require __DIR__ . '/../vendor/autoload.php';
 
 use Minim\Authenticator;
-use Pontoon\Authentication;
+use Pontoon\Services\Authentication;
 use Pontoon\DeployConfiguration;
 use Pontoon\GlobalConfiguration;
 

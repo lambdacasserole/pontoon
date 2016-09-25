@@ -1,6 +1,6 @@
 <?php
 
-namespace Pontoon;
+namespace Pontoon\Services;
 
 use Minim\Authenticator;
 use Minim\Configuration;
@@ -27,7 +27,7 @@ class Authentication
      */
     public static function get() {
         if (self::$auth === null) {
-            self::$auth = new Authenticator(new Configuration(__DIR__ . '/../security.yml'));
+            self::$auth = new Authenticator(new Configuration(__DIR__ . '/../../security.yml'));
         }
         return self::$auth;
     }
