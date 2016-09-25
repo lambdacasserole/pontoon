@@ -10,7 +10,7 @@ use Spyc;
  * @author Saul Johnson
  * @since 13/07/2015
  */
-class DeployConfiguration
+class DeployTarget
 {
     /**
      * The raw associative array that underlies this class

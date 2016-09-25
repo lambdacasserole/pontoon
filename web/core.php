@@ -4,7 +4,7 @@ require __DIR__ . '/../vendor/autoload.php';
 
 use Minim\Authenticator;
 use Pontoon\Services\Authentication;
-use Pontoon\DeployConfiguration;
+use Pontoon\DeployTarget;
 use Pontoon\GlobalConfiguration;
 use Pontoon\Services\Configuration;
 
@@ -31,7 +31,7 @@ function getGlobalConfiguration()
 /**
  * Gets an array of valid deploy target directory paths.
  *
- * @return DeployConfiguration[]
+ * @return DeployTarget[]
  */
 function getDeployTargets()
 {
@@ -49,7 +49,7 @@ function getDeployTargets()
         $deployConfig = $path . '/' . $script;
         if ($file[0] != '.' && is_dir($path) && file_exists($deployConfig))
         {
-            $loadedConfig = new DeployConfiguration($deployConfig);
+            $loadedConfig = new DeployTarget($deployConfig);
             if ($loadedConfig->isDeployEnabled())
             {
                 $targets[] = $loadedConfig;
