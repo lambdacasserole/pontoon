@@ -3,7 +3,7 @@
 require __DIR__ . '/../vendor/autoload.php';
 
 use Minim\Authenticator;
-use Minim\Configuration;
+use Pontoon\Authentication;
 use Pontoon\DeployConfiguration;
 use Pontoon\GlobalConfiguration;
 
@@ -14,8 +14,7 @@ use Pontoon\GlobalConfiguration;
  */
 function getAuthenticator()
 {
-    $config = new Configuration(__DIR__ . '/../security.yml');
-    return new Authenticator($config);
+    return Authentication::get();
 }
 
 /**

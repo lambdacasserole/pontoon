@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3312e7e40c394a033b10bd22a365e358",
+    "content-hash": "c8194773c635159bf33c90fcf8ee6c13",
     "packages": [
         {
             "name": "ircmaxell/password-compat",
@@ -50,16 +50,16 @@
         },
         {
             "name": "lambdacasserole/minim",
-            "version": "v1.2",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lambdacasserole/minim.git",
-                "reference": "52147d50cd8edc0570748a68fdd7c753d89c0c6c"
+                "reference": "18cf112cff0a8733238aa81e8b262f326728c749"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lambdacasserole/minim/zipball/52147d50cd8edc0570748a68fdd7c753d89c0c6c",
-                "reference": "52147d50cd8edc0570748a68fdd7c753d89c0c6c",
+                "url": "https://api.github.com/repos/lambdacasserole/minim/zipball/18cf112cff0a8733238aa81e8b262f326728c749",
+                "reference": "18cf112cff0a8733238aa81e8b262f326728c749",
                 "shasum": ""
             },
             "require": {
@@ -97,7 +97,7 @@
                 "single",
                 "user"
             ],
-            "time": "2016-09-23 18:42:40"
+            "time": "2016-09-25 18:28:27"
         },
         {
             "name": "mustangostang/spyc",
@@ -196,16 +196,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.24.2",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "33093f6e310e6976baeac7b14f3a6ec02f2d79b7"
+                "reference": "f16a634ab08d87e520da5671ec52153d627f10f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/33093f6e310e6976baeac7b14f3a6ec02f2d79b7",
-                "reference": "33093f6e310e6976baeac7b14f3a6ec02f2d79b7",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/f16a634ab08d87e520da5671ec52153d627f10f6",
+                "reference": "f16a634ab08d87e520da5671ec52153d627f10f6",
                 "shasum": ""
             },
             "require": {
@@ -218,7 +218,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.24-dev"
+                    "dev-master": "1.25-dev"
                 }
             },
             "autoload": {
@@ -253,7 +253,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-09-01 17:50:53"
+            "time": "2016-09-21 23:05:12"
         }
     ],
     "packages-dev": [],
