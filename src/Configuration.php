@@ -7,7 +7,6 @@ use Spyc;
 /**
  * Represents a handle on the application configuration file.
  *
- * @package Pontoon
  * @author Saul Johnson
  * @since 09/07/2015
  */
