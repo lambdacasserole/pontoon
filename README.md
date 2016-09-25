@@ -5,25 +5,22 @@ Pontoon is a simple and straightforward tool for running deploy scripts from a w
 ![Logo](assets/logo.png)
 
 ## Installation
-Pontoon comes with a set of default credentials.
+Pontoon comes with a set of default credentials in `security.yml.dist`:
 
 ```
 Email: me@example.com
 Password: demo
-Secret: V8c6pxjBeoCd
 ```
 
 These *must* be changed before you go into production, so sort these out first:
 
-* Copy `config.yml.template` and rename the copy to `config.yml`.
+* Copy `security.yml.dist` and rename the copy to `security.yml`
+* Follow the installation guide for [Minim](https://github.com/lambdacasserole/minim) which Pontoon uses as its authentication system.
+
+After you've done that, set up the Pontoon configuration file:
+
+* Copy `config.yml.dist` and rename the copy to `config.yml`.
 * Open up `config.yml` in your favorite text editor.
-* Change the `admin_email` field to your email address
-* Change the `admin_password_hash` field to the SHA-256 hash of a password of
-  your choice. Never use online services to create your hashes, but hashes
-  created using [this service](http://www.xorbin.com/tools/sha256-hash-calculator)
-  will work.
-* It's vital that you also change the `secret_key` field to a randomly-generated
-  string at least 12 characters long.
 * Change `root_path` to the path of the directory containing all your websites.
 
 Next, you should make sure your `www-data` user can run `git` and has an SSH key configured on your server and GitHub account. An excellent tutorial for this can be found [here](http://technotes.tumblr.com/post/33867325150/php-hook-script-that-can-git-pull).
