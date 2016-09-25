@@ -5,7 +5,7 @@ namespace Pontoon\Services;
 use Pontoon\Configuration;
 
 /**
- * Provides access to the application configuration service.
+ * Provides access to the application configuration file.
  *
  * @author Saul Johnson
  * @since 25/09/2016
@@ -13,14 +13,14 @@ use Pontoon\Configuration;
 class ConfigurationService
 {
     /**
-     * The application configuration service instance.
+     * The application configuration instance.
      *
      * @var Configuration
      */
     private static $config;
 
     /**
-     * Gets the application configuration service instance.
+     * Gets the application configuration instance.
      *
      * @return Configuration
      */
