@@ -2,7 +2,7 @@
 
 namespace Pontoon\Services;
 
-use Pontoon\GlobalConfiguration;
+use Pontoon\Configuration;
 
 /**
  * Provides access to the application configuration service.
@@ -15,18 +15,18 @@ class ConfigurationService
     /**
      * The application configuration service instance.
      *
-     * @var GlobalConfiguration
+     * @var Configuration
      */
     private static $config;
 
     /**
      * Gets the application configuration service instance.
      *
-     * @return GlobalConfiguration
+     * @return Configuration
      */
     public static function get() {
         if (self::$config === null) {
-            return new GlobalConfiguration(__DIR__ . '/../../config.yml');
+            return new Configuration(__DIR__ . '/../../config.yml');
         }
         return self::$config;
     }

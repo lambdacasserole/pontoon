@@ -5,13 +5,13 @@ namespace Pontoon;
 use Spyc;
 
 /**
- * Represents a handle on the global configuration file.
+ * Represents a handle on the application configuration file.
  *
  * @package Pontoon
  * @author Saul Johnson
  * @since 09/07/2015
  */
-class GlobalConfiguration
+class Configuration
 {
     /**
      * The raw associative array that underlies this class.
@@ -21,9 +21,9 @@ class GlobalConfiguration
     private $config;
 
     /**
-     * Initializes a new instance of a handle on the global configuration file.
+     * Initializes a new instance of a handle on the application configuration file.
      *
-     * @param string $path  the path to read the global configuration file from
+     * @param string $path  the path to read the application configuration file from
      */
     public function __construct($path)
     {
@@ -41,7 +41,7 @@ class GlobalConfiguration
     }
 
     /**
-     * Gets the name of the deploy configuration file to look for.
+     * Gets the name of the deploy configuration files to look for.
      *
      * @return string
      */
