@@ -4,21 +4,20 @@
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" href="favicon.png" type="image/png">
-        <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
-        <link rel="stylesheet" type="text/css" href="bower_components/bootswatch/simplex/bootstrap.min.css"/>
-        <link rel="stylesheet" type="text/css" href="css/styles.css"/>
-        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        {% include '_favicon.html.twig' %}
+        <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="/bower_components/bootswatch/simplex/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="/css/styles.css"/>
+        <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         {% block javascripts %}{% endblock %}
         <title>Pontoon - Simple Deployment | {% block title %}{% endblock %}</title>
-        {% include '_favicon.html.twig' %}
     </head>
     <body>
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <img src="images/logo.svg">
+                    <img src="/images/logo.svg">
                 </div>
             </div>
             <nav class="navbar navbar-default">
@@ -39,14 +38,14 @@
                             </li>
                             {% if authenticated %}
                                 <li class="{{ navActive == 1 ? 'active' : '' }}">
-                                    <a href="deploy.php">Deployments</a>
+                                    <a href="/deploy.php">Deployments</a>
                                 </li>
                                 <li>
-                                    <a href="logout.php">Logout</a>
+                                    <a href="/logout.php">Logout</a>
                                 </li>
                             {% else %}
                                 <li>
-                                    <a href="login.php">Login</a>
+                                    <a href="/login.php">Login</a>
                                 </li>
                             {% endif %}
                         </ul>
