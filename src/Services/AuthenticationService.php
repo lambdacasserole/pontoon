@@ -11,7 +11,7 @@ use Minim\Configuration;
  * @author Saul Johnson
  * @since 25/09/2016
  */
-class Authentication
+class AuthenticationService
 {
     /**
      * The application authentication service instance.

@@ -10,7 +10,7 @@ use Pontoon\GlobalConfiguration;
  * @author Saul Johnson
  * @since 25/09/2016
  */
-class Configuration
+class ConfigurationService
 {
     /**
      * The application configuration service instance.

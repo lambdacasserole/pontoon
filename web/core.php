@@ -3,10 +3,10 @@
 require __DIR__ . '/../vendor/autoload.php';
 
 use Minim\Authenticator;
-use Pontoon\Services\Authentication;
+use Pontoon\Services\AuthenticationService;
 use Pontoon\DeployTarget;
 use Pontoon\GlobalConfiguration;
-use Pontoon\Services\Configuration;
+use Pontoon\Services\ConfigurationService;
 
 /**
  * Gets the authenticator for the application.
@@ -15,7 +15,7 @@ use Pontoon\Services\Configuration;
  */
 function getAuthenticator()
 {
-    return Authentication::get();
+    return AuthenticationService::get();
 }
 
 /**
@@ -25,7 +25,7 @@ function getAuthenticator()
  */
 function getGlobalConfiguration()
 {
-    return Configuration::get();
+    return ConfigurationService::get();
 }
 
 /**
