@@ -4,21 +4,60 @@ Pontoon is a simple and straightforward tool for running deploy scripts from a w
 
 ![Logo](assets/logo.png)
 
-When it comes to getting my latest changes online, I yearn for something simple. One button click should be all it takes or I
-start laughing like a maniac and talking to my cup of coffee.
+## Installation
+Pontoon comes with a set of default credentials.
 
-## Aaahhhhh! F**k!
+```
+Email: me@example.com
+Password: demo
+Secret: V8c6pxjBeoCd
+```
 
-If that's how you sound at the moment when a client asks you to make a minor, 5-second content change that's gonna end
-up taking you half an hour by the time you've found your SSH keys, loaded them into your client, connected and run all
-your deployment stuff then do yourself a favour and grab Pontoon.
+These *must* be changed before you go into production, so sort these out first:
 
-## Troubleshooting
+* Copy `config.yml.template` and rename the copy to `config.yml`.
+* Open up `config.yml` in your favorite text editor.
+* Change the `admin_email` field to your email address
+* Change the `admin_password_hash` field to the SHA-256 hash of a password of
+  your choice. Never use online services to create your hashes, but hashes
+  created using [this service](http://www.xorbin.com/tools/sha256-hash-calculator)
+  will work.
+* It's vital that you also change the `secret_key` field to a randomly-generated
+  string at least 12 characters long.
+* Change `root_path` to the path of the directory containing all your websites.
 
-Here are a few things to bear in mind before flaming the sweet ever-loving heck out of me for producing software that
-doesn't work:
+Next, you should make sure your `www-data` user can run `git` and has an SSH key configured on your server and GitHub account. An excellent tutorial for this can be found [here](http://technotes.tumblr.com/post/33867325150/php-hook-script-that-can-git-pull).
 
-* This has been tested on LAMP on Ubuntu 14.04 and nothing else.
-* At its core, all this thing really does is execute a script associated with a project when a button is clicked.
-* You need to make sure that whatever your script contains, your user has permission to do.
-* For the love of heck, make sure you don't forget that your script will execute as www-user on Apache.
+## Configuring Your Websites
+Note that all your website directories must be under one single root directory, and each must contain a `pontoon.yml` file at its root level to be deployable. A `pontoon.yml` file has the following structure:
+
+```yaml
+project_name: My Website
+description: My first website deployed with Pontoon!
+deploy_enabled: true
+deploy_script: deploy.sh
+scripting_exe: bash
+```
+
+The Pontoon web application will list directories containing files like this as deployable applications, allowing you to deploy them using your Pontoon installation.
+
+For example, you might put the following into your deploy.sh file:
+
+```bash
+cd /var/www/html
+echo git pull
+```
+
+Now, when you click 'deploy' on the Pontoon web interface, a command will be executed of the form:
+
+```
+<scripting_exe> <deploy_script>
+```
+
+Which in this instance, looks like:
+
+```
+bash deploy.sh
+```
+
+So a `git pull` will be executed on your web directory, deploying the site from your Git repository to your live server.
