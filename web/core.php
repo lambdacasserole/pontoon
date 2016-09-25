@@ -6,6 +6,7 @@ use Minim\Authenticator;
 use Pontoon\Services\Authentication;
 use Pontoon\DeployConfiguration;
 use Pontoon\GlobalConfiguration;
+use Pontoon\Services\Configuration;
 
 /**
  * Gets the authenticator for the application.
@@ -24,7 +25,7 @@ function getAuthenticator()
  */
 function getGlobalConfiguration()
 {
-    return new GlobalConfiguration(__DIR__ . '/../config.yml');
+    return Configuration::get();
 }
 
 /**
