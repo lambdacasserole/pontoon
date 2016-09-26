@@ -1,2 +1,3 @@
 root_path: /var/www
 deploy_config_name: pontoon.yml
+api_key: el2Xf67lu7NS

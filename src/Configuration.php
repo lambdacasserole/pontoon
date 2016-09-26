@@ -48,4 +48,14 @@ class Configuration
     {
         return $this->config['deploy_config_name'];
     }
+
+    /**
+     * Gets the API key that can be used to deploy an application.
+     *
+     * @return string
+     */
+    public function getApiKey()
+    {
+       return $this->config['api_key'];
+    }
 }

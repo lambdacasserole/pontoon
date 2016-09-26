@@ -3,7 +3,10 @@
 require 'core.php';
 
 // No unauthenticated deploys!
-protectPage();
+if ($_GET['key'] != getGlobalConfiguration()->getApiKey())
+{
+    protectPage();
+}
 
 // Run relevant deploy.
 $hash = $_GET['project'];
