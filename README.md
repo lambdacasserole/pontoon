@@ -108,3 +108,7 @@ https://your-pontoon-installation.com/go.php?project=project_id&key=api_key
 ```
 
 Where `api_key` is the key specified in your `config.yml` file and `project_id` is the deploy ID you can find by logging in to the web app.
+
+## Limitations
+
+This system is designed to be quite dumb and extrememly simple. It won't replace any of your CI tools.
