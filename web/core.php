@@ -87,7 +87,7 @@ function redirect($url)
  */
 function redirectToDeployPage()
 {
-    redirect('deploy.php');
+    redirect('/deploy.php');
 }
 
 /**
@@ -95,7 +95,7 @@ function redirectToDeployPage()
  */
 function redirectToLoginPage()
 {
-    redirect('login.php');
+    redirect('/');
 }
 
 /**
