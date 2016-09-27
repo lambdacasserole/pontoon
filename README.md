@@ -62,6 +62,7 @@ After you've done that, set up the Pontoon configuration file:
 * Copy `config.yml.dist` and rename the copy to `config.yml`.
 * Open up `config.yml` in your favorite text editor.
 * Change `root_path` to the path of the directory containing all your websites.
+* Change `api_key` to a random string at least 12 characters long and keep it secret.
 
 Next, you should make sure your `www-data` user can run `git` and has an SSH key configured on your server and GitHub account. An excellent tutorial for this can be found [here](http://technotes.tumblr.com/post/33867325150/php-hook-script-that-can-git-pull).
 
@@ -98,3 +99,12 @@ bash deploy.sh
 ```
 
 So a `git pull` will be executed on your web directory, deploying the site from your Git repository to your live server.
+
+## Automatic Deployments
+To deploy automatically from a Git repository, configure your repository management system to send a request to the following URL on push:
+
+```
+https://your-pontoon-installation.com/go.php?project=project_id&key=api_key
+```
+
+Where `api_key` is the key specified in your `config.yml` file and `project_id` is the deploy ID you can find by logging in to the web app.
