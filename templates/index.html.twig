@@ -1,51 +1,65 @@
-{% extends 'base.html.twig' %}
+<!doctype html>
 
-{% block title %}About{% endblock %}
-
-{% block content %}
-    <div class="row">
-        <div class="col-md-12">
-            <h1>Deploy it! Now!</h1>
-            <p>
-                Pontoon is a simple and straightforward tool for running deploy scripts from a web service.
-                When it comes to getting my latest changes online, I yearn for something simple. One button
-                click should be all it takes or I start laughing like a maniac and talking to my cup of coffee.
-            </p>
-            <blockquote>
-                "For f**k's sake! Just f**king deploy you piece of s**t!"
-                <footer>Me when my 3rd party deployment service fails</footer>
-            </blockquote>
-            <h2>Aaahhhhh! F**k!</h2>
-            <p>
-                If that's how you sound at the moment when a client asks you to make a minor, 5-second content
-                change that's gonna end up taking you half an hour by the time you've found your SSH keys,
-                loaded them into your client, connected and run all your deployment stuff then do yourself a
-                favour and grab Pontoon.
-            </p>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% include '_favicon.html.twig' %}
+        <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="/bower_components/bootswatch/simplex/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="/css/login.css"/>
+        <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <title>Pontoon - Simple Deployment | Log in</title>
+    </head>
+    <body>
+        <div class="center-body">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <img src="/images/logo.svg" class="logo">
+                </div>
+            </div>
+            {% if status == 1 %}
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="alert alert-danger">
+                            Invalid username or password.
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+            <form class="form-signin" method="post">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="inputEmail">Email address</label>
+                            <input type="email" id="inputEmail" class="form-control input-lg" name="email" required autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword">Password</label>
+                            <input type="password" id="inputPassword" class="form-control input-lg" name="password" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <a class="btn btn-lg btn-info btn-block margin-bottom-plus" href="/">Cancel</a>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-lg btn-success btn-block margin-bottom-plus" type="submit">Sign in</button>
+                    </div>
+                </div>
+            </form>
+            <div class="row">
+                <div class="col-md-12 text-muted text-center small copyright">
+                    Pontoon Deploy System | Copyright &copy; Saul Johnson
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-4 text-center">
-            <img src="/images/step-1-install.svg">
-            <h3>Bish</h3>
-            <p>
-                Install it by shoving it on your server as a website. Done. Next.
-            </p>
-        </div>
-        <div class="col-md-4 text-center">
-            <img src="/images/step-2-config.svg">
-            <h3>Bash</h3>
-            <p>
-                Configure a simple YAML file for your project, call it pontoon.yml and bundle it with your
-                project. Done.
-            </p>
-        </div>
-        <div class="col-md-4 text-center">
-            <img src="/images/step-3-click.svg">
-            <h3>Bosh</h3>
-            <p>
-                Log in to your setup and click deploy. Your changes are live. Boom.
-            </p>
-        </div>
-    </div>
-{% endblock %}
+    </body>
+</html>

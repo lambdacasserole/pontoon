@@ -33,11 +33,8 @@
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li class="{{ navActive == 0 ? 'active' : '' }}">
-                                <a href="/">About</a>
-                            </li>
                             {% if authenticated %}
-                                <li class="{{ navActive == 1 ? 'active' : '' }}">
+                                <li class="{{ navActive == 0 ? 'active' : '' }}">
                                     <a href="/deploy.php">Deployments</a>
                                 </li>
                                 <li>
@@ -45,7 +42,7 @@
                                 </li>
                             {% else %}
                                 <li>
-                                    <a href="/login.php">Login</a>
+                                    <a href="/">Login</a>
                                 </li>
                             {% endif %}
                         </ul>
