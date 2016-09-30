@@ -111,4 +111,4 @@ Where `api_key` is the key specified in your `config.yml` file and `project_id` 
 
 ## Limitations
 
-This system is designed to be quite dumb and extrememly simple. It won't replace any of your CI tools.
+This system is designed to be quite dumb and extremely simple. It won't replace any of your CI tools.
