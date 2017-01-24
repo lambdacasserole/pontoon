@@ -4,8 +4,67 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c8194773c635159bf33c90fcf8ee6c13",
+    "content-hash": "c3fc97e8f1fe756c3f64ff5e28005e0c",
     "packages": [
+        {
+            "name": "defuse/php-encryption",
+            "version": "2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/defuse/php-encryption.git",
+                "reference": "2c6fea3d9a4eaaa8cef86b2a89f3660818117b33"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/defuse/php-encryption/zipball/2c6fea3d9a4eaaa8cef86b2a89f3660818117b33",
+                "reference": "2c6fea3d9a4eaaa8cef86b2a89f3660818117b33",
+                "shasum": ""
+            },
+            "require": {
+                "ext-openssl": "*",
+                "paragonie/random_compat": "~2.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "nikic/php-parser": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Hornby",
+                    "email": "taylor@defuse.ca",
+                    "homepage": "https://defuse.ca/"
+                },
+                {
+                    "name": "Scott Arciszewski",
+                    "email": "info@paragonie.com",
+                    "homepage": "https://paragonie.com"
+                }
+            ],
+            "description": "Secure PHP Encryption Library",
+            "keywords": [
+                "aes",
+                "authenticated encryption",
+                "cipher",
+                "crypto",
+                "cryptography",
+                "encrypt",
+                "encryption",
+                "openssl",
+                "security",
+                "symmetric key cryptography"
+            ],
+            "time": "2016-10-10T15:20:26+00:00"
+        },
         {
             "name": "ircmaxell/password-compat",
             "version": "v1.0.4",
@@ -46,58 +105,7 @@
                 "hashing",
                 "password"
             ],
-            "time": "2014-11-20 16:49:30"
-        },
-        {
-            "name": "lambdacasserole/minim",
-            "version": "v1.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/lambdacasserole/minim.git",
-                "reference": "18cf112cff0a8733238aa81e8b262f326728c749"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/lambdacasserole/minim/zipball/18cf112cff0a8733238aa81e8b262f326728c749",
-                "reference": "18cf112cff0a8733238aa81e8b262f326728c749",
-                "shasum": ""
-            },
-            "require": {
-                "ircmaxell/password-compat": "^1.0",
-                "mustangostang/spyc": "^0.5.1",
-                "paragonie/random_compat": "^2.0",
-                "php": ">=5.3.0"
-            },
-            "bin": [
-                "bin/minim-genhash"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Minim\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Saul Johnson",
-                    "email": "saul.a.johnson@gmail.com",
-                    "homepage": "https://sauljohnson.com/",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Minimal single-user auth in PHP.",
-            "homepage": "https://github.com/lambdacasserole/minim",
-            "keywords": [
-                "Authentication",
-                "auth",
-                "single",
-                "user"
-            ],
-            "time": "2016-09-25 18:28:27"
+            "time": "2014-11-20T16:49:30+00:00"
         },
         {
             "name": "mustangostang/spyc",
@@ -144,20 +152,20 @@
                 "yaml",
                 "yml"
             ],
-            "time": "2013-02-21 10:52:01"
+            "time": "2013-02-21T10:52:01+00:00"
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v2.0.2",
+            "version": "v2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "088c04e2f261c33bed6ca5245491cfca69195ccf"
+                "reference": "a9b97968bcde1c4de2a5ec6cbd06a0f6c919b46e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/088c04e2f261c33bed6ca5245491cfca69195ccf",
-                "reference": "088c04e2f261c33bed6ca5245491cfca69195ccf",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/a9b97968bcde1c4de2a5ec6cbd06a0f6c919b46e",
+                "reference": "a9b97968bcde1c4de2a5ec6cbd06a0f6c919b46e",
                 "shasum": ""
             },
             "require": {
@@ -192,20 +200,72 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2016-04-03 06:00:07"
+            "time": "2016-11-07T23:38:38+00:00"
         },
         {
-            "name": "twig/twig",
-            "version": "v1.25.0",
+            "name": "semibreve/minim",
+            "version": "v1.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/twigphp/Twig.git",
-                "reference": "f16a634ab08d87e520da5671ec52153d627f10f6"
+                "url": "https://github.com/semibreve/minim.git",
+                "reference": "b212f1cee31e2998f05f908ab16ad1e21af0bea0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/f16a634ab08d87e520da5671ec52153d627f10f6",
-                "reference": "f16a634ab08d87e520da5671ec52153d627f10f6",
+                "url": "https://api.github.com/repos/semibreve/minim/zipball/b212f1cee31e2998f05f908ab16ad1e21af0bea0",
+                "reference": "b212f1cee31e2998f05f908ab16ad1e21af0bea0",
+                "shasum": ""
+            },
+            "require": {
+                "defuse/php-encryption": "^2.0",
+                "ircmaxell/password-compat": "^1.0",
+                "mustangostang/spyc": "^0.5.1",
+                "paragonie/random_compat": "^2.0",
+                "php": ">=5.3.0"
+            },
+            "bin": [
+                "bin/minim-genhash"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Minim\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Saul Johnson",
+                    "email": "saul.a.johnson@gmail.com",
+                    "homepage": "https://sauljohnson.com/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Minimal single-user auth in PHP.",
+            "homepage": "https://github.com/semibreve/minim",
+            "keywords": [
+                "Authentication",
+                "auth",
+                "single",
+                "user"
+            ],
+            "time": "2017-01-24T21:01:34+00:00"
+        },
+        {
+            "name": "twig/twig",
+            "version": "v1.31.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twigphp/Twig.git",
+                "reference": "ddc9e3e20ee9c0b6908f401ac8353635b750eca7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/ddc9e3e20ee9c0b6908f401ac8353635b750eca7",
+                "reference": "ddc9e3e20ee9c0b6908f401ac8353635b750eca7",
                 "shasum": ""
             },
             "require": {
@@ -213,12 +273,12 @@
             },
             "require-dev": {
                 "symfony/debug": "~2.7",
-                "symfony/phpunit-bridge": "~2.7"
+                "symfony/phpunit-bridge": "~3.2"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.25-dev"
+                    "dev-master": "1.31-dev"
                 }
             },
             "autoload": {
@@ -253,7 +313,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-09-21 23:05:12"
+            "time": "2017-01-11T19:36:15+00:00"
         }
     ],
     "packages-dev": [],
