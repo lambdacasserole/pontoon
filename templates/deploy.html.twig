@@ -28,9 +28,9 @@
                         <tr>
                             <th>Project Name</th>
                             <th>Deploy ID</th>
-                            <th>Description</th>
+                            <!--<th>Description</th>
                             <th>Path</th>
-                            <th>Deploy Script</th>
+                            <th>Deploy Script</th>-->
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -38,9 +38,9 @@
                         <tr>
                             <td>{{ target.projectName}}</td>
                             <td>{{ target.identifier }}</td>
-                            <td>{{ target.description }}</td>
+                            <!--<td>{{ target.description }}</td>
                             <td>{{ target.directoryPath|replace('\\', '/') }}</td>
-                            <td>{{ target.deployScript }}</td>
+                            <td>{{ target.deployScript }}</td>-->
                             <td>
                                 <button onclick="deploy('{{ target.identifier }}');" class="btn btn-primary">Deploy</button>
                             </td>
