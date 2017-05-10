@@ -67,5 +67,9 @@ phpunit.phar
 /web/js/
 /web/css/
 
-# Login token.
+# Login token
 /token.dat
+
+# Pontoon files
+/pontoon.yml
+/deploy.sh
