@@ -44,17 +44,18 @@ crashlytics-build.properties
 fabric.properties
 
 # Composer packages
-vendor
+/vendor/
+/composer.lock
 
 # NPM packages
-node_modules
+/node_modules/
 
 # Bower packages
-bower_components
+/web/bower_components/
 
 # Utilities
-composer.phar
-phpunit.phar
+/composer.phar
+/phpunit.phar
 
 # Cache
 /cache/
