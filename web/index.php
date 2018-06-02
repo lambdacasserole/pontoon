@@ -4,6 +4,9 @@ require 'core.php';
 
 use Minim\Request;
 
+// Set security headers.
+setSecurityHeaders();
+
 // If we're already logged in, go to deploy.
 if (getAuthenticator()->isAuthenticated())
 {

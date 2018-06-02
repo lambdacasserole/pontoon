@@ -12,7 +12,8 @@
   "require": {
     "mustangostang/spyc": "^0.5.1",
     "twig/twig": "^1.18",
-    "semibreve/minim": "^1.6"
+    "semibreve/minim": "^1.6",
+    "aidantwoods/secureheaders": "^2.0"
   },
   "autoload": {
     "psr-4": {

@@ -2,6 +2,9 @@
 
 require 'core.php';
 
+// Set security headers.
+setSecurityHeaders();
+
 // Protect page.
 protectPage();
 

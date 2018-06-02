@@ -2,6 +2,9 @@
 
 require 'core.php';
 
+// Set security headers.
+setSecurityHeaders();
+
 // No unauthenticated deploys!
 if ($_GET['key'] != getGlobalConfiguration()->getApiKey())
 {

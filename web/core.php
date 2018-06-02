@@ -8,6 +8,8 @@ use Pontoon\DeployTarget;
 use Pontoon\Configuration;
 use Pontoon\Services\ConfigurationService;
 
+use \Aidantwoods\SecureHeaders\SecureHeaders;
+
 /**
  * Gets the authenticator for the application.
  *
@@ -107,4 +109,15 @@ function protectPage()
     {
         redirectToLoginPage();
     }
+}
+
+/**
+ * Sets security headers in the response.
+ */
+function setSecurityHeaders()
+{
+	$headers = new SecureHeaders();
+	$headers->hsts();
+	$headers->csp('default', 'self');
+	$headers->apply();
 }
