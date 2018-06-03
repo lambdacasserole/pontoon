@@ -112,6 +112,20 @@ function protectPage()
 }
 
 /**
+ * Generates and returns a nonce unique to this request.
+ *
+ * @return string
+ */
+function getNonce()
+{
+	if (!isset($GLOBALS['nonce'])) 
+	{
+		$GLOBALS['nonce'] = base64_encode(random_bytes(32));
+	}
+	return $GLOBALS['nonce'];
+}
+
+/**
  * Sets security headers in the response.
  */
 function setSecurityHeaders()
@@ -123,5 +137,6 @@ function setSecurityHeaders()
 	$headers->csp('style', 'fonts.googleapis.com');
 	$headers->csp('font', 'self');
 	$headers->csp('font', 'fonts.gstatic.com');
+	$headers->csp('style', 'nonce-' . getNonce()); // Nonce for styles.
 	$headers->apply();
 }

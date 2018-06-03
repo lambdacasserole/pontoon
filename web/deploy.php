@@ -14,4 +14,5 @@ echo getTwig()->render('deploy.html.twig', [
     'navActive' => 0,
     'targets' => $targets,
     'authenticated' => getAuthenticator()->isAuthenticated(),
+    'nonce' => getNonce()
 ]);
