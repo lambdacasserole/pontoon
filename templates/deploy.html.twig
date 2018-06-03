@@ -42,7 +42,7 @@
                             <td>{{ target.directoryPath|replace('\\', '/') }}</td>
                             <td>{{ target.deployScript }}</td>-->
                             <td>
-                                <button onclick="deploy('{{ target.identifier }}');" class="btn btn-primary">Deploy</button>
+                                <button data-deploy-id="{{ target.identifier }}" class="btn btn-primary deploy-btn">Deploy</button>
                             </td>
                         </tr>
                     {% endfor %}

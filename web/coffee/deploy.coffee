@@ -8,3 +8,9 @@ window.deploy = (hash) ->
     result = JSON.parse data
     $('.col-msg').html "<div class=\"alert alert-#{result.status}\">#{result.message}</div><pre>#{result.result}</pre>"
     waitingDialog.hide()
+
+# On document ready.
+$ ->
+  # Set up deploy click event handlers.
+  $('.deploy-btn').on 'click', () ->
+    deploy $(this).data('deployId')
