@@ -40,6 +40,7 @@ class DeployTarget
      */
     public function __construct($path, Configuration $config)
     {
+        $this->config = $config;
         $this->path = $path;
         $this->data = Spyc::YAMLLoad($path);
     }
