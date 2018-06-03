@@ -137,6 +137,6 @@ function setSecurityHeaders()
 	$headers->csp('style', 'fonts.googleapis.com');
 	$headers->csp('font', 'self');
 	$headers->csp('font', 'fonts.gstatic.com');
-	$headers->csp('style', 'nonce-' . getNonce()); // Nonce for styles.
+	$headers->csp('style', "'nonce-" . getNonce() . "'"); // Nonce for styles.
 	$headers->apply();
 }
