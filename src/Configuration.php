@@ -32,7 +32,7 @@ class Configuration
     /**
      * Gets the root path that contains website directories.
      *
-     * @return string
+     * @return string the root path that contains website directories
      */
     public function getRootPath()
     {
@@ -42,7 +42,7 @@ class Configuration
     /**
      * Gets the name of the deploy configuration files to look for.
      *
-     * @return string
+     * @return string the name of the deploy configuration files to look for
      */
     public function getDeployConfigName()
     {
@@ -52,7 +52,7 @@ class Configuration
     /**
      * Gets the API key that can be used to deploy an application.
      *
-     * @return string
+     * @return string the API key that can be used to deploy an application
      */
     public function getApiKey()
     {

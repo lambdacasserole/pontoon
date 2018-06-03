@@ -23,7 +23,7 @@ class AuthenticationService
     /**
      * Gets the application authentication service instance.
      *
-     * @return Authenticator
+     * @return Authenticator  the application authentication service instance
      */
     public static function get() {
         if (self::$auth === null) {

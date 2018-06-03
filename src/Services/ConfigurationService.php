@@ -22,7 +22,7 @@ class ConfigurationService
     /**
      * Gets the application configuration instance.
      *
-     * @return Configuration
+     * @return Configuration  the application configuration instance
      */
     public static function get() {
         if (self::$config === null) {

@@ -22,7 +22,7 @@ class DeployTarget
     /**
      * The path to the deploy configuration file.
      *
-     * @var string
+     * @var string  path to the deploy configuration file
      */
     private $path;
 
@@ -40,7 +40,7 @@ class DeployTarget
     /**
      * Gets the project name.
      *
-     * @return string
+     * @return string the project name
      */
     public function getProjectName()
     {
@@ -50,7 +50,7 @@ class DeployTarget
     /**
      * Gets the project description.
      *
-     * @return string
+     * @return string the project description
      */
     public function getDescription()
     {
@@ -60,7 +60,7 @@ class DeployTarget
     /**
      * Gets whether or not deployment of this project is enabled.
      *
-     * @return bool
+     * @return bool true if deployment of this project is enabled, otherwise false
      */
     public function isDeployEnabled()
     {
@@ -70,7 +70,7 @@ class DeployTarget
     /**
      * Gets the filename of the deploy script for this project.
      *
-     * @return string
+     * @return string the filename of the deploy script for this project
      */
     public function getDeployScript()
     {
@@ -80,7 +80,7 @@ class DeployTarget
     /**
      * Gets the full path of the deploy script for this project.
      *
-     * @return string
+     * @return string the full path of the deploy script for this project
      */
     public function getFullDeployScriptPath()
     {
@@ -90,7 +90,7 @@ class DeployTarget
     /**
      * Gets the name of the scripting executable to use to execute the deploy script.
      *
-     * @return string
+     * @return string the name of the scripting executable to use to execute the deploy script
      */
     public function getScriptingExecutable()
     {
@@ -100,7 +100,7 @@ class DeployTarget
     /**
      * Gets the command needed to run the deploy script.
      *
-     * @return string
+     * @return string the command needed to run the deploy script
      */
     public function getDeployCommand()
     {
@@ -110,7 +110,7 @@ class DeployTarget
     /**
      * Gets the directory path of the project.
      *
-     * @return string
+     * @return string the directory path of the project
      */
     public function getDirectoryPath()
     {
@@ -120,7 +120,7 @@ class DeployTarget
     /**
      * Gets the path to the deploy configuration file.
      *
-     * @return string
+     * @return string the path to the deploy configuration file
      */
     public function getPath()
     {
@@ -130,7 +130,7 @@ class DeployTarget
     /**
      * Gets the unique identifier for the project.
      *
-     * @return string
+     * @return string the unique identifier for the project
      */
     public function getIdentifier()
     {
