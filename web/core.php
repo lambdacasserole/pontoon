@@ -119,6 +119,7 @@ function setSecurityHeaders()
 	$headers = new SecureHeaders();
 	$headers->hsts();
 	$headers->csp('default', 'self');
+	$headers->csp('style', 'self');
 	$headers->csp('style', 'fonts.googleapis.com');
 	$headers->apply();
 }
