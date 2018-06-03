@@ -58,4 +58,14 @@ class Configuration
     {
        return $this->config['api_key'];
     }
+
+    /**
+     * Gets the salt used to compute deploy IDs.
+     *
+     * @return string the salt used to compute deploy IDs
+     */
+    public function getIdSalt()
+    {
+      return $this->config['id_salt'];
+    }
 }

@@ -13,11 +13,18 @@ use Spyc;
 class DeployTarget
 {
     /**
+     * A handle on the application configuration file.
+     *
+     * @var Configuration
+     */
+    private $config;
+
+    /**
      * The raw associative array that underlies this class
      *
      * @var array
      */
-    private $config;
+    private $data;
 
     /**
      * The path to the deploy configuration file.
@@ -31,10 +38,10 @@ class DeployTarget
      *
      * @param string $path  the path to the configuration file to load
      */
-    public function __construct($path)
+    public function __construct($path, Configuration $config)
     {
         $this->path = $path;
-        $this->config = Spyc::YAMLLoad($path);
+        $this->data = Spyc::YAMLLoad($path);
     }
 
     /**
@@ -44,7 +51,7 @@ class DeployTarget
      */
     public function getProjectName()
     {
-        return $this->config['project_name'];
+        return $this->data['project_name'];
     }
 
     /**
@@ -54,7 +61,7 @@ class DeployTarget
      */
     public function getDescription()
     {
-        return $this->config['description'];
+        return $this->data['description'];
     }
 
     /**
@@ -64,7 +71,7 @@ class DeployTarget
      */
     public function isDeployEnabled()
     {
-        return $this->config['deploy_enabled'];
+        return $this->data['deploy_enabled'];
     }
 
     /**
@@ -74,7 +81,7 @@ class DeployTarget
      */
     public function getDeployScript()
     {
-        return $this->config['deploy_script'];
+        return $this->data['deploy_script'];
     }
 
     /**
@@ -94,7 +101,7 @@ class DeployTarget
      */
     public function getScriptingExecutable()
     {
-        return $this->config['scripting_exe'];
+        return $this->data['scripting_exe'];
     }
 
     /**
@@ -134,6 +141,6 @@ class DeployTarget
      */
     public function getIdentifier()
     {
-        return md5($this->path);
+        return hash('sha256', $this->path . $this->config->getIdSalt());
     }
 }

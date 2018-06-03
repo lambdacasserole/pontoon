@@ -51,7 +51,7 @@ function getDeployTargets()
         $deployConfig = $path . '/' . $script;
         if ($file[0] != '.' && is_dir($path) && file_exists($deployConfig))
         {
-            $loadedConfig = new DeployTarget($deployConfig);
+            $loadedConfig = new DeployTarget($deployConfig, $config);
             if ($loadedConfig->isDeployEnabled())
             {
                 $targets[] = $loadedConfig;
@@ -118,7 +118,7 @@ function protectPage()
  */
 function getNonce()
 {
-	if (!isset($GLOBALS['nonce'])) 
+	if (!isset($GLOBALS['nonce']))
 	{
 		$GLOBALS['nonce'] = base64_encode(random_bytes(32));
 	}
