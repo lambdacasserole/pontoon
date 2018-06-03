@@ -3,11 +3,12 @@
 {% block title %}Deployments{% endblock %}
 
 {% block meta %}
-	<meta name="nonce" content="{{ nonce }}">
+    <meta name="nonce" content="{{ nonce }}">
 {% endblock %}
 
 {% block javascripts %}
     <!-- <script type="text/javascript" src="/bower_components/bootstrap-waitingfor/build/bootstrap-waitingfor.min.js"></script> -->
+    <script type="text/javascript" src="/bower_components/clipboard/dist/clipboard.min.js"></script>
     <script type="text/javascript" src="/lib/bootstrap-waitingfor.js"></script>
     <script type="text/javascript" src="/js/deploy.js"></script>
 {% endblock %}
@@ -41,8 +42,17 @@
                     </thead>
                     {% for target in targets %}
                         <tr>
-                            <td>{{ target.projectName}}</td>
-                            <td>{{ target.identifier }}</td>
+                            <td>{{ target.projectName }}</td>
+                            <td>
+                                <div class="input-group">
+                                    <input type="text" id="proj_id_{{ loop.index }}" value="{{ target.identifier }}" class="form-control">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-info btn-copy" data-clipboard-target="#proj_id_{{ loop.index }}">
+                                            <span class="glyphicon glyphicon-copy" aria-hidden="true"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </td>
                             <!--<td>{{ target.description }}</td>
                             <td>{{ target.directoryPath|replace('\\', '/') }}</td>
                             <td>{{ target.deployScript }}</td>-->
