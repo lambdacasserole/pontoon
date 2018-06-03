@@ -31,7 +31,7 @@
 			'<div class="modal fade bwf-modal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">' +
 				'<div class="modal-dialog modal-m">' +
 					'<div class="modal-content">' +
-						'<div class="modal-header bwf-modal-header"></div>' +
+						'<div class="modal-header"></div>' +
 						'<div class="modal-body">' +
 							'<div class="progress progress-striped active bwf-progress">' +
 								'<div class="progress-bar bwf-progress-bar"></div>' +
@@ -110,6 +110,7 @@
 			if (settings.headerText === false) {
 				$contentTag.html(message);
 				$dialog.find('.modal-body').prepend($contentTag);
+				$dialog.find('.modal-header').html($headerTag).hide();
 			}
 			else if (settings.headerText) {
 				$headerTag.html(settings.headerText);
