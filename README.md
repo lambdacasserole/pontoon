@@ -63,6 +63,7 @@ After you've done that, set up the Pontoon configuration file:
 * Open up `config.yml` in your favorite text editor.
 * Change `root_path` to the path of the directory containing all your websites.
 * Change `api_key` to a random string at least 12 characters long and keep it secret.
+* Change `id_salt` to a random string at least 12 characters long. This is used to generate unique project IDs without giving away information about the directory in which your website resides, so it's best to keep it a secret.
 
 Next, you should make sure your `www-data` user can run `git` and has an SSH key configured on your server and GitHub account. An excellent tutorial for this can be found [here](http://technotes.tumblr.com/post/33867325150/php-hook-script-that-can-git-pull).
 
